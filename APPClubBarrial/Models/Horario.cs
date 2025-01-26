@@ -16,12 +16,7 @@ namespace APPClubBarrial.Models
     public class Horario
     {
         public int id { get; set; }
-        [Required]
-        [ForeignKey("Actividad")]
-        public Actividad Actividad { get; set; }
-        [Required]
-        [ForeignKey("Sede")]
-        public Sede Sede { get; set; }
+       
         [Required(ErrorMessage = "Debe tener un dia de la semana asignado.")]
         public DiaSemana Dia { get; set; }
         [Required(ErrorMessage ="Debe tener una Hora de inicio.")]

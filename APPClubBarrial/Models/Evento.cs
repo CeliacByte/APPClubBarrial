@@ -9,11 +9,13 @@ namespace APPClubBarrial.Models
         [Required(ErrorMessage ="El nombre es obligatorio.")]
         [MaxLength(100,ErrorMessage = "El nombre no puede tener mas de 100 caracteres.")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "La sede es obligatorio.")]
         [ForeignKey("Sede")]
+        public int SedeId { get; set; }
+        [Required(ErrorMessage = "La sede es obligatorio.")]
         public Sede Sede { get; set; }
-        [Required(ErrorMessage = "La actividad es obligatorio.")]
         [ForeignKey("Actividad")]
+        public int ActividadId { get; set; }
+        [Required(ErrorMessage = "La actividad es obligatorio.")]
         public Actividad Actividad{ get; set; }
         public DateTime FechaHora { get; set; }
         [Required(ErrorMessage = "Debe ingresar una duracion")]
@@ -22,6 +24,8 @@ namespace APPClubBarrial.Models
         [MaxLength(300, ErrorMessage = "La descripcion no puede tener mas de 300 caracteres.")]
         public string Descripcion { get; set; }
         [ForeignKey("Usuario")]
+        public string UsuarioId { get; set; }
+        [Required(ErrorMessage ="El usuario es obligatorio.")]
         public Usuario Usuario { get; set; } //Usuario creador del evento
     }
 }

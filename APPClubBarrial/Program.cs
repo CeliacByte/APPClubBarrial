@@ -1,6 +1,7 @@
 using APPClubBarrial.Data;
 using APPClubBarrial.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

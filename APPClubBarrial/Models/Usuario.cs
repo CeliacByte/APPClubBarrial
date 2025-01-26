@@ -6,8 +6,6 @@ namespace APPClubBarrial.Models
     public class Usuario : IdentityUser
     {
 
-        public int Id { get; set; }
-
         [Required(ErrorMessage = "El nombre es obligatorio.")]
         [MaxLength(30, ErrorMessage = "El nombre completo no puede tener mas de 30 caracteres.")]
         public string Names { get; set; }
